@@ -22,3 +22,11 @@ data/ → cleaned datasets
 python/ → analysis scripts  
 visualizations/ → charts generated from analysis  
 dashboards/ → Tableau dashboard screenshots
+
+## Example Visualizations
+
+### YouTube Performance Correlation
+![Correlation Heatmap](youtube_corr_heatmap.png)
+
+### Monthly YouTube Views
+![Monthly Views](youtube_monthly_views.png)
