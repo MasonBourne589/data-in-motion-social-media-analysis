@@ -22,6 +22,3 @@ data/ → cleaned datasets
 python/ → analysis scripts  
 visualizations/ → charts generated from analysis  
 dashboards/ → Tableau dashboard screenshots
-
-## Example Visualization
-![Correlation Heatmap](visualizations/youtube_correlation_heatmap.png)
