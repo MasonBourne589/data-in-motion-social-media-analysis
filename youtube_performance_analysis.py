@@ -1,7 +1,7 @@
 import pandas as pd
 from pathlib import Path
 
-# Point to your Excel file (use the exact file name you have)
+# Point to your Excel file
 file_path = Path(__file__).resolve().parents[1] / "data" / "youtube_data.xlsx"
 
 print("Looking for file at:", file_path)
@@ -26,11 +26,11 @@ df_videos = df[df["Video title"].notna()].copy()
 print("\nRows before:", len(df))
 print("Rows after (videos only):", len(df_videos))
 
-# Quick sanity check: the first few titles should be real video titles now
+# the first few titles should be real video titles now
 print("\nFirst 3 video titles:")
 print(df_videos["Video title"].head(3).to_string(index=False))
 
-# Cleaning Step 2: convert publish time from text → datetime
+# Cleaning Step 2: convert publish time from text to datetime
 df_videos["Video publish time"] = pd.to_datetime(df_videos["Video publish time"], errors="coerce")
 
 print("\nPublish time dtype:", df_videos["Video publish time"].dtype)
@@ -227,5 +227,6 @@ plt.title("YouTube Performance Metric Correlation")
 plt.tight_layout()
 
 plt.savefig(output_dir / "youtube_corr_heatmap.png", dpi=200)
+
 
 plt.show()
